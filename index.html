@@ -3,175 +3,191 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Video Repository</title>
+    <title>Video Gallery</title>
     <style>
-        body { font-family: sans-serif; margin: 20px; background-color: #f4f4f4; }
-        header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 30px; }
-        #professor-corner-btn {
-            padding: 10px 20px;
-            background-color: #007bff;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-            font-weight: bold;
-            border: none;
-            cursor: pointer;
+        /* Basic styling for readability and centering */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f0f0f0;
+            text-align: center;
         }
-        #video-gallery {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 20px;
+        h1 {
+            color: #333;
+            border-bottom: 2px solid #ccc;
+            padding-bottom: 10px;
         }
-        .video-container {
-            background-color: white;
-            border: 1px solid #ddd;
-            border-radius: 8px;
+        /* Container for each video to give it a clean block */
+        .video-wrapper {
+            margin: 20px auto;
             padding: 15px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            position: relative; 
+            border: 1px solid #ddd;
+            background-color: #fff;
+            max-width: 800px; /* Adjust this to fit your iframe width */
         }
-        .video-title {
-            font-size: 1.1em;
-            font-weight: bold;
-            margin-bottom: 10px;
-        }
-        .video-embed-wrapper {
-            position: relative;
-            padding-bottom: 75%; 
-            height: 0;
-            overflow: hidden;
-        }
-        .video-embed-wrapper iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            border: 0;
-        }
-        /* Click Overlay to reliably capture the click and log data */
-        .click-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: 10; /* Above the iframe */
-            cursor: pointer;
+        /* Style for the iframe itself */
+        .video-wrapper iframe {
+            display: block;
+            margin: 10px auto;
+            max-width: 100%;
         }
     </style>
 </head>
 <body>
 
-    <header>
-        <h1>Video Repository</h1>
-        <a id="professor-corner-btn" target="_blank">Professor Corner (Submit Video)</a>
-    </header>
+    <h1>My Collection of Videos</h1>
+    <p>This file is ready for your 200 video embed codes.</p>
 
-    <div id="loading">Loading videos...</div>
-    <div id="video-gallery">
-        </div>
+    <div "<iframe src=""https://www.xvideos3.com/embedframe/kvdmdpm0b8a"" frameborder=0 width=510 height=400 scrolling=no allowfullscreen=allowfullscreen>
+    
+    <div class="video-wrapper">
+        <h2>Video 2 Title</h2>
+        "<iframe src=""https://www.xvideos3.com/embedframe/kvcbudh7a80"" frameborder=0 width=510 height=400 scrolling=no allowfullscreen=allowfullscreen></iframe>"
+    </div>
 
-    <script>
-        // *** YOUR DEPLOYED GOOGLE APPS SCRIPT URL ***
-        const APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbyndHkEMiG4-B6pFuw6pEqnXABmOIq3UE_cFOBLvNbJ7AtRC2Iahw__ZB-MBopbjlbI/exec"; 
-        
-        // *** YOUR GOOGLE FORM VIEW LINK ***
-        // Using the canonical view link based on your form editor URL structure
-        const GOOGLE_FORM_URL = "https://docs.google.com/forms/d/e/1FAIpQLSeOnHCD_rzoKXUL_fePHGcq3HqFhKPAkkl5hth0YLJMMYm3vA/viewform";
+    <div class="video-wrapper">
+        <h2>Video 200 Title</h2>
+        <iframe src="https://www.xvideos3.com/embedframe/kefddif31ba" frameborder=0 width=510 height=400 scrolling=no allowfullscreen=allowfullscreen></iframe>
+<div class="video-wrapper">
+        <h2>Video 1 Title</h2>
+        <iframe src="https://www.xvideos3.com/embedframe/ktfftbm7068" frameborder=0 width=510 height=400 scrolling=no allowfullscreen=allowfullscreen></iframe>
+</div>
 
-        // Assign the link to the Professor Corner button
-        document.getElementById('professor-corner-btn').href = GOOGLE_FORM_URL;
+  <div class="video-wrapper">
+        <h2>Video 1 Title</h2>
+        <iframe src="https://www.xvideos3.com/embedframe/oictbio7a90" frameborder=0 width=510 height=400 scrolling=no allowfullscreen=allowfullscreen></iframe>
+  </div>
+    <div class="video-wrapper">
+        <h2>Video 1 Title</h2>
+        <iframe src="https://www.xvideos3.com/embedframe/ifbakmb9a92" frameborder=0 width=510 height=400 scrolling=no allowfullscreen=allowfullscreen></iframe>
+    </div>
 
-        // --- User ID Logic (Persists across sessions/reloads) ---
-        function getUserId() {
-            let userId = localStorage.getItem('userUniqueId');
-            if (!userId) {
-                // Generate a simple unique ID
-                userId = 'user_' + Date.now().toString(36) + Math.random().toString(36).substring(2, 9);
-                localStorage.setItem('userUniqueId', userId);
-            }
-            return userId;
-        }
-        const uniqueId = getUserId();
-        
-        // --- API Interaction Functions ---
+     <div class="video-wrapper">
+        <h2>Video 1 Title</h2>
+        <iframe src="https://www.xvideos3.com/embedframe/oictbio7a90" frameborder=0 width=510 height=400 scrolling=no allowfullscreen=allowfullscreen></iframe>
+    </div>
+    
+    <div class="video-wrapper">
+        <h2>Video 2 Title</h2>
+        <iframe src="https://www.xvideos3.com/embedframe/kiflomk0c02" frameborder=0 width=510 height=400 scrolling=no allowfullscreen=allowfullscreen></iframe>
 
-        async function fetchVideos() {
-            try {
-                const response = await fetch(APPS_SCRIPT_URL);
-                if (!response.ok) throw new Error('Network response was not ok');
-                return response.json();
-            } catch (error) {
-                console.error("Could not fetch videos:", error);
-                document.getElementById('loading').textContent = "Failed to load videos. Check the Google Apps Script deployment URL.";
-                return [];
-            }
-        }
+    
+<div class="video-wrapper">
+        <h2>Video 1 Title</h2>
+        <iframe src="https://www.xvideos3.com/embedframe/ifbakmb9a92" frameborder=0 width=510 height=400 scrolling=no allowfullscreen=allowfullscreen></iframe>
+</div>
 
-        async function logClick(uniqueKey) {
-            
-            try {
-                // Send the unique video key (Video Title) and the user ID to the Apps Script API
-                await fetch(APPS_SCRIPT_URL, {
-                    method: 'POST',
-                    mode: 'cors',
-                    headers: {
-                        'Content-Type': 'application/json',
-                    },
-                    body: JSON.stringify({
-                        uniqueKey: uniqueKey,
-                        userId: uniqueId
-                    })
-                });
-            } catch (error) {
-                console.error("Failed to log click:", error);
-            }
-        }
+  <div class="video-wrapper">
+        <h2>Video 1 Title</h2>
+        <iframe src="https://www.xvideos3.com/embedframe/ucmvpmm86ab" frameborder=0 width=510 height=400 scrolling=no allowfullscreen=allowfullscreen></iframe>
+  </div>
+    <div class="video-wrapper">
+        <h2>Video 1 Title</h2>
+         <iframe src="https://www.xvideos3.com/embedframe/iflialme253" frameborder=0 width=510 height=400 scrolling=no allowfullscreen=allowfullscreen></iframe>
+    </div>
+       <div class="video-wrapper">
+        <h2>Video 1 Title</h2>
+        <iframe src="https://www.xvideos3.com/embedframe/uhedoavd90d" frameborder=0 width=510 height=400 scrolling=no allowfullscreen=allowfullscreen></iframe>
+    </div>
+    
+    <div class="video-wrapper">
+        <h2>Video 2 Title</h2>
+        <iframe src="https://www.xvideos3.com/embedframe/uhedoavd90d" frameborder=0 width=510 height=400 scrolling=no allowfullscreen=allowfullscreen></iframe>
+    </div>
 
-        function renderVideos(videos) {
-            const gallery = document.getElementById('video-gallery');
-            const loading = document.getElementById('loading');
-            
-            loading.style.display = 'none';
+    <div class="video-wrapper">
+        <h2>Video 200 Title</h2>
+        <iframe src="https://www.xvideos3.com/embedframe/kmlupmbb995" frameborder=0 width=510 height=400 scrolling=no allowfullscreen=allowfullscreen></iframe>
+    </div>
+<div class="video-wrapper">
+        <h2>Video 1 Title</h2>
+         <iframe src="https://www.xvideos3.com/embedframe/kfehcldebf2" frameborder=0 width=510 height=400 scrolling=no allowfullscreen=allowfullscreen></iframe>
+</div>
 
-            if (videos.length === 0) {
-                gallery.innerHTML = '<p>No videos available yet. Use the Professor Corner button to add one!</p>';
-                return;
-            }
+  <div class="video-wrapper">
+        <h2>Video 1 Title</h2>
+        <iframe src="https://www.xvideos3.com/embedframe/kpfalim4cbb" frameborder=0 width=510 height=400 scrolling=no allowfullscreen=allowfullscreen></iframe>
+  </div>
+    <div class="video-wrapper">
+        <h2>Video 1 Title</h2>
+         <iframe src="https://www.xvideos3.com/embedframe/kpfalim4cbb" frameborder=0 width=510 height=400 scrolling=no allowfullscreen=allowfullscreen></iframe>
+    </div>
+    <div class="video-wrapper">
+        <h2>Video 1 Title</h2>
+        <iframe src="https://www.xvideos3.com/embedframe/okuvvkf29f4" frameborder=0 width=510 height=400 scrolling=no allowfullscreen=allowfullscreen></iframe>
+    </div>
+    
+    <div class="video-wrapper">
+        <h2>Video 2 Title</h2>
+         <iframe src="https://www.xvideos2.com/embedframe/utheklb5629" frameborder=0 width=510 height=400 scrolling=no allowfullscreen=allowfullscreen></iframe>
+    </div>
 
-            videos.forEach(video => {
-                const container = document.createElement('div');
-                container.className = 'video-container';
-                
-                const uniqueKey = video.uniqueKey; 
-                
-                const title = document.createElement('div');
-                title.className = 'video-title';
-                title.textContent = video.title;
+    <div class="video-wrapper">
+        <h2>Video 200 Title</h2>
+        <iframe src="https://www.xvideos2.com/embedframe/ulbvhfv17a6" frameborder=0 width=510 height=400 scrolling=no allowfullscreen=allowfullscreen></iframe>
+    </div>
+<div class="video-wrapper">
+        <h2>Video 1 Title</h2>
+        <iframe src="https://www.xvideos2.com/embedframe/iokkvth977e" frameborder=0 width=510 height=400 scrolling=no allowfullscreen=allowfullscreen></iframe>
+</div>
 
-                const embedWrapper = document.createElement('div');
-                embedWrapper.className = 'video-embed-wrapper';
-                embedWrapper.innerHTML = video.embedCode; 
-                
-                const overlay = document.createElement('div');
-                overlay.className = 'click-overlay';
-                overlay.title = "Click to view video and log data";
-                
-                overlay.addEventListener('click', () => {
-                    logClick(uniqueKey);
-                });
+  <div class="video-wrapper">
+        <h2>Video 1 Title</h2>
+        <iframe src="https://www.xvideos2.com/embedframe/hfukofvdce4" frameborder=0 width=510 height=400 scrolling=no allowfullscreen=allowfullscreen></iframe>
+  </div>
+    <div class="video-wrapper">
+        <h2>Video 1 Title</h2>
+        <iframe src="https://www.xvideos2.com/embedframe/uilfvtk7366" frameborder=0 width=510 height=400 scrolling=no allowfullscreen=allowfullscreen></iframe>
+    </div>
+    <div class="video-wrapper">
+        <h2>Video 1 Title</h2>
+        <iframe src="https://www.xvideos2.com/embedframe/kalvpdb59b7" frameborder=0 width=510 height=400 scrolling=no allowfullscreen=allowfullscreen></iframe>
+    </div>
+    
+    <div class="video-wrapper">
+        <h2>Video 2 Title</h2>
+        <iframe src="https://www.xvideos2.com/embedframe/ubdifdbf650" frameborder=0 width=510 height=400 scrolling=no allowfullscreen=allowfullscreen></iframe>
+    </div>
 
+    <div class="video-wrapper">
+        <h2>Video 200 Title</h2>
+        <iframe src="https://www.xvideos2.com/embedframe/umtbeeff6fa" frameborder=0 width=510 height=400 scrolling=no allowfullscreen=allowfullscreen></iframe>
+    </div>
+<div class="video-wrapper">
+        <h2>Video 1 Title</h2>
+        <iframe src="https://www.xvideos2.com/embedframe/kckhokhf830" frameborder=0 width=510 height=400 scrolling=no allowfullscreen=allowfullscreen></iframe>
+</div>
 
-                container.appendChild(title);
-                container.appendChild(overlay); 
-                container.appendChild(embedWrapper);
-                gallery.appendChild(container);
-            });
-        }
+  <div class="video-wrapper">
+        <h2>Video 1 Title</h2>
+        <iframe src="https://www.xvideos2.com/embedframe/otpvauh74df" frameborder=0 width=510 height=400 scrolling=no allowfullscreen=allowfullscreen></iframe>
+  </div>
+    <div class="video-wrapper">
+        <h2>Video 1 Title</h2>
+        <iframe src="https://www.xvideos2.com/embedframe/uohimvt79ca" frameborder=0 width=510 height=400 scrolling=no allowfullscreen=allowfullscreen></iframe>
+    </div>
 
-        // --- Initialization ---
-        fetchVideos().then(renderVideos);
-    </script>
+    <div class="video-wrapper">
+        <h2>Video 200 Title</h2>
+        <iframe src="https://www.xvideos2.com/embedframe/othpokm3b87" frameborder=0 width=510 height=400 scrolling=no allowfullscreen=allowfullscreen></iframe>
+    </div>
+<div class="video-wrapper">
+        <h2>Video 1 Title</h2>
+        <p><iframe src="https://www.xvideos2.com/embedframe/uffhclh021e" frameborder=0 width=510 height=400 scrolling=no allowfullscreen=allowfullscreen></iframe>
+</div>
+
+  <div class="video-wrapper">
+        <h2>Video 1 Title</h2>
+        <iframe src="https://www.xvideos2.com/embedframe/ufmcfdda303" frameborder=0 width=510 height=400 scrolling=no allowfullscreen=allowfullscreen></iframe>
+  </div>
+    <div class="video-wrapper">
+        <h2>Video 1 Title</h2>
+        <iframe src="https://www.xvideos2.com/embedframe/ufcicph93e5" frameborder=0 width=510 height=400 scrolling=no allowfullscreen=allowfullscreen></iframe>
+    </div>
+
+    <footer>
+        <p>Gallery created on: <script>document.write(new Date().toLocaleDateString());</script></p>
+    </footer>
+
 </body>
 </html>
