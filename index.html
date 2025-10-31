@@ -76,9 +76,11 @@
         // *** YOUR DEPLOYED GOOGLE APPS SCRIPT URL ***
         const APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbyndHkEMiG4-B6pFuw6pEqnXABmOIq3UE_cFOBLvNbJ7AtRC2Iahw__ZB-MBopbjlbI/exec"; 
         
-        // Your Google Form URL
-        const GOOGLE_FORM_URL = "https://docs.google.com/forms/d/e/1FAIpQLSeOnHCD_rzoKXUL_fePHGcq3HqFhKPAkkl5hth0YLMMYm3vA/viewform"; // Assuming this is your form view link
+        // *** YOUR GOOGLE FORM VIEW LINK ***
+        // Using the canonical view link based on your form editor URL structure
+        const GOOGLE_FORM_URL = "https://docs.google.com/forms/d/e/1FAIpQLSeOnHCD_rzoKXUL_fePHGcq3HqFhKPAkkl5hth0YLJMMYm3vA/viewform";
 
+        // Assign the link to the Professor Corner button
         document.getElementById('professor-corner-btn').href = GOOGLE_FORM_URL;
 
         // --- User ID Logic (Persists across sessions/reloads) ---
@@ -142,7 +144,6 @@
                 const container = document.createElement('div');
                 container.className = 'video-container';
                 
-                // The unique key is the Video Title from the sheet, used for tracking
                 const uniqueKey = video.uniqueKey; 
                 
                 const title = document.createElement('div');
@@ -153,22 +154,17 @@
                 embedWrapper.className = 'video-embed-wrapper';
                 embedWrapper.innerHTML = video.embedCode; 
                 
-                // --- Add a transparent overlay to capture clicks reliably ---
                 const overlay = document.createElement('div');
                 overlay.className = 'click-overlay';
                 overlay.title = "Click to view video and log data";
                 
-                // Add the click listener to the overlay
                 overlay.addEventListener('click', () => {
                     logClick(uniqueKey);
-                    // To interact with the video player after logging, 
-                    // you typically need to remove or hide the overlay here.
-                    // For this simple tracking, we'll keep it simple.
                 });
 
 
                 container.appendChild(title);
-                container.appendChild(overlay); // Overlay on top of iframe
+                container.appendChild(overlay); 
                 container.appendChild(embedWrapper);
                 gallery.appendChild(container);
             });
